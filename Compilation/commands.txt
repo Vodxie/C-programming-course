@@ -1,0 +1,17 @@
+
+3)
+gcc -E transformation.c -o transformation.i
+gcc -c transformation.c -o transformation.o
+gcc main.c transformation.o -o main
+./main
+
+4)
+gcc -o ex4 ex4.c -lm
+./ex4
+
+
+5)
+gcc -c maths.c -o maths.o
+ar rcs libmaths.a maths.o
+gcc -o ex5 ex5.c -L. -lmaths
+./ex5
